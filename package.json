@@ -1,0 +1,11 @@
+{
+  "name": "udacity-image-processing-api",
+  "version": "1.0.0",
+  "description": "educational project based on udacity cohort, the goal is to provide an API that helps in image resizing",
+  "main": "index.ts",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Shaher Jamal Eddin",
+  "license": "MIT"
+}

@@ -4,7 +4,9 @@
   "description": "educational project based on udacity cohort, the goal is to provide an API that helps in image resizing",
   "main": "index.ts",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "tsc",
+    "start": "node build/index.js"
   },
   "author": "Shaher Jamal Eddin",
   "license": "MIT",
@@ -13,6 +15,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.31.0",
+    "@types/express": "^5.0.3",
     "eslint": "^9.31.0",
     "globals": "^16.3.0",
     "jasmine": "^5.8.0",

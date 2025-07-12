@@ -13,7 +13,8 @@
   "author": "Shaher Jamal Eddin",
   "license": "MIT",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "sharp": "^0.34.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.31.0",

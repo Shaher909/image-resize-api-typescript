@@ -30,14 +30,15 @@ npm run start
 
 ## Usage
 
-To rezie an image, place it in the images folder.
-Then, visit the following endpoint `api/rezie` and specify the following paramters:
+To reszie an image, place it in the images folder.
+Then, visit the following endpoint `api/resize` and specify the following paramters:
 
 - imageName
 - width
 - height
-  for example:
+
+for example:
 
 ```
-?imageName=example.jpg&width=200&height=300
+http://localhost:3000/api/resize?imageName=wildefire.jpeg&width=125&height=150
 ```

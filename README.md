@@ -27,3 +27,17 @@ npm run test:build
 ```
 npm run start
 ```
+
+## Usage
+
+To rezie an image, place it in the images folder.
+Then, visit the following endpoint `api/rezie` and specify the following paramters:
+
+- imageName
+- width
+- height
+  for example:
+
+```
+?imageName=example.jpg&width=200&height=300
+```

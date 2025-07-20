@@ -42,3 +42,11 @@ for example:
 ```
 http://localhost:3000/api/resize?imageName=wildefire.jpeg&width=125&height=150
 ```
+
+## Additional specifications
+
+- if an image was already resized and available in the folder, it will not be resized again upon a new request, this information will be available in the logs on the server size:
+
+```
+skipping rezising, image already existed
+```

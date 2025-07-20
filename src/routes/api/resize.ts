@@ -1,6 +1,6 @@
 import express from "express";
 import logger from "../../utilities/logger";
-import resizeImage from "../../utilities/resize";
+import resizeImage from "../../utilities/resizeImage";
 
 const resize = express.Router();
 

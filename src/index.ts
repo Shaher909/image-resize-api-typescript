@@ -2,7 +2,6 @@ import express from "express";
 import routes from "./routes/index";
 import resize from "./routes/api/resize";
 import logger from "./utilities/logger";
-import resizeImage from "./utilities/resize";
 
 const app = express();
 const port = 3000;

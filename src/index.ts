@@ -10,7 +10,7 @@ const port = 3000;
 //routes
 // testing route
 app.get("/ping", logger, (req, res) => {
-  res.send("pong!");
+  res.send("pong");
 });
 
 app.use("/api", routes); //this makes server use the routes we use globally
@@ -20,3 +20,5 @@ app.use("/api/resize", resize); //this makes server use the resize route
 app.listen(port, () => {
   console.log(`Server started at http://localhost:${port}`);
 });
+
+export default app;

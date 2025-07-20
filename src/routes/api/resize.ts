@@ -26,7 +26,7 @@ resize.get("/", logger, async (req, res) => {
     );
 
     // Send the resized image path as a response
-    res.send(`Resized image saved at: ${resizedImagePath}`);
+    res.send(`Resized image saved at:${resizedImagePath}`);
   } catch (error) {
     console.error("Error resizing image:", error);
     res.status(500).send("An error occurred while resizing the image.");

@@ -18,6 +18,7 @@ const resizeImage = async (
       originalImageDirectory,
       originalImageName
     );
+    let imageExist = false;
     const resizedImagePath = path.join(
       resizedImageDirectory,
       `${width}x${height}-${originalImageName}`
@@ -33,12 +34,19 @@ const resizeImage = async (
       fs.mkdirSync(resizedImageDirectory, { recursive: true });
     }
 
-    // Resize the image and save it to the resized directory
-    await sharp(originalImagePath)
-      .resize(width, height)
-      .toFile(resizedImagePath);
+    // Ensure the resized image does not alreaey exist
+    if (!fs.existsSync(resizedImagePath)) {
+      // Resize the image and save it to the resized directory
+      await sharp(originalImagePath)
+        .resize(width, height)
+        .toFile(resizedImagePath);
 
-    return resizedImagePath; // Return the path of the resized image
+      return resizedImagePath; // Return the path of the resized image
+    } else {
+      // If the resized image already exists, return its path
+      console.log("skipping rezising, image already existed");
+      return resizedImagePath;
+    }
   } catch (error) {
     console.error("Error resizing image:");
     throw error; // Re-throw the error for further handling

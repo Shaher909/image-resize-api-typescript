@@ -7,4 +7,3 @@
 - [✅] resize endpoint
 - [✅] resize end point testing using supertest
 - [✅] avoid resizing the image if it exists
-- [❌] caching ?

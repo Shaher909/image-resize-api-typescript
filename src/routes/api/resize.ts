@@ -1,10 +1,10 @@
-import express from "express";
-import logger from "../../utilities/logger";
-import resizeImage from "../../utilities/resize";
+import express from 'express';
+import logger from '../../utilities/logger';
+import resizeImage from '../../utilities/resize';
 
 const resize = express.Router();
 
-resize.get("/", logger, async (req, res) => {
+resize.get('/', logger, async (req, res) => {
   try {
     // Extract query parameters
     const { imageName, width, height } = req.query;
@@ -14,7 +14,7 @@ resize.get("/", logger, async (req, res) => {
       return res
         .status(400)
         .send(
-          "Missing required query parameters: imageName, width, or height."
+          'Missing required query parameters: imageName, width, or height.',
         );
     }
 
@@ -22,7 +22,7 @@ resize.get("/", logger, async (req, res) => {
     const resizedImagePath = await resizeImage(
       imageName as string,
       parseInt(width as string, 10),
-      parseInt(height as string, 10)
+      parseInt(height as string, 10),
     );
 
     const relativeImagePath = `/images/resized/${width}x${height}-${imageName}`;
@@ -38,7 +38,7 @@ resize.get("/", logger, async (req, res) => {
       </html>
     `);
   } catch (error) {
-    console.error("Error resizing image:", error);
+    console.error('Error resizing image:', error);
     //res.status(500).send("An error occurred while resizing the image.");
   }
 });

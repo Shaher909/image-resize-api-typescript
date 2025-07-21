@@ -1,32 +1,32 @@
-import sharp from "sharp";
-import fs from "fs";
-import path from "path";
+import sharp from 'sharp';
+import fs from 'fs';
+import path from 'path';
 
 const resizeImage = async (
   originalImageName: string,
   width: number,
   height: number,
-  originalImageDirectory: string = path.resolve(__dirname, "../../images/"),
+  originalImageDirectory: string = path.resolve(__dirname, '../../images/'),
   resizedImageDirectory: string = path.resolve(
     __dirname,
-    "../../images/resized/"
-  )
+    '../../images/resized/',
+  ),
 ): Promise<string> => {
   try {
     // Construct the full paths
     const originalImagePath = path.join(
       originalImageDirectory,
-      originalImageName
+      originalImageName,
     );
     let imageExist = false;
     const resizedImagePath = path.join(
       resizedImageDirectory,
-      `${width}x${height}-${originalImageName}`
+      `${width}x${height}-${originalImageName}`,
     );
 
     // Check if the original image exists
     if (!fs.existsSync(originalImagePath)) {
-      throw new Error("Image file not found at the specified path.");
+      throw new Error('Image file not found at the specified path.');
     }
 
     // Ensure the resized image directory exists
@@ -44,11 +44,11 @@ const resizeImage = async (
       return resizedImagePath; // Return the path of the resized image
     } else {
       // If the resized image already exists, return its path
-      console.log("skipping rezising, image already existed");
+      console.log('skipping rezising, image already existed');
       return resizedImagePath;
     }
   } catch (error) {
-    console.error("Error resizing image:");
+    console.error('Error resizing image:');
     throw error; // Re-throw the error for further handling
   }
 };

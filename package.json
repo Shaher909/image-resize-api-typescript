@@ -9,8 +9,8 @@
     "build": "tsc",
     "start": "node build/index.js",
     "jasmine": "jasmine",
-    "prettier": "prettier --config .prettierrc 'src/*.ts' --write",
-    "lint": "eslint 'src/*.ts'"
+    "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "lint": "eslint 'src/**/*.ts'"
   },
   "author": "Shaher Jamal Eddin",
   "license": "MIT",

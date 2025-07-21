@@ -1,5 +1,5 @@
 import logger from '../utilities/logger';
-import { Request, Response, NextFunction } from 'express';
+import { Request, Response } from 'express';
 
 describe('Logger Middleware', () => {
   it('should log the correct request information', () => {

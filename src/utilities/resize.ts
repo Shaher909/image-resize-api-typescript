@@ -18,7 +18,6 @@ const resizeImage = async (
       originalImageDirectory,
       originalImageName,
     );
-    let imageExist = false;
     const resizedImagePath = path.join(
       resizedImageDirectory,
       `${width}x${height}-${originalImageName}`,

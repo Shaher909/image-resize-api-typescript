@@ -58,3 +58,11 @@ Run the following command to format the code:
 ```
 npm run prettier
 ```
+
+### Linting
+
+Run the following command to lint the code:
+
+```
+npm run lint
+```

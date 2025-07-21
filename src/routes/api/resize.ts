@@ -14,7 +14,7 @@ resize.get('/', logger, async (req, res) => {
       return res
         .status(400)
         .send(
-          'Missing required query parameters: imageName, width, or height.',
+          'Missing required query parameters: imageName, width, or height. Please check the pattern of the URL request to match ?imageName=file.jpeg&width=number&height=number ',
         );
     }
 
@@ -40,6 +40,20 @@ resize.get('/', logger, async (req, res) => {
   } catch (error) {
     console.error('Error resizing image:', error);
     //res.status(500).send("An error occurred while resizing the image.");
+
+    const errorMessage =
+      error instanceof Error
+        ? error.message
+        : 'An error occurred while resizing the image';
+
+    res.send(`
+      <html>
+        <body>
+          <h1>Hmm.. there was an error</h1>
+          <p>${errorMessage}</p>
+        </body>
+      </html>
+    `);
   }
 });
 

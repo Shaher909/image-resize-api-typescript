@@ -8,7 +8,8 @@
     "test:build": "npm run build && npm run jasmine",
     "build": "tsc",
     "start": "node build/index.js",
-    "jasmine": "jasmine"
+    "jasmine": "jasmine",
+    "prettier": "prettier --config .prettierrc 'src/*.ts' --write"
   },
   "author": "Shaher Jamal Eddin",
   "license": "MIT",

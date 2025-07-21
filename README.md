@@ -50,3 +50,11 @@ http://localhost:3000/api/resize?imageName=wildefire.jpeg&width=125&height=150
 ```
 skipping rezising, image already existed
 ```
+
+### Formatting
+
+Run the following command to format the code:
+
+```
+npm run prettier
+```

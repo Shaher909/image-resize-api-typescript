@@ -4,7 +4,7 @@
   "description": "educational project based on udacity cohort, the goal is to provide an API that helps in image resizing",
   "main": "index.ts",
   "scripts": {
-    "test": "test",
+    "test": "npm run jasmine",
     "test:build": "npm run build && npm run jasmine",
     "build": "tsc",
     "start": "node build/index.js",

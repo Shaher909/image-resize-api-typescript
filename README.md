@@ -1,4 +1,4 @@
-# udacity-image-processing-api
+# Simple image-resizing-api using TypeScript
 
 Udacity project for learning purposes, image processing api.
 The project uses:
